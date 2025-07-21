@@ -9,4 +9,8 @@ extends PanelContainer
 
 
 func _on_tool_axe_pressed() -> void:
-	pass 
+	ToolManager.select_tool(DataTypes.Tools.AxeWood)
+
+
+func _on_tool_tilling_pressed() -> void:
+	ToolManager.select_tool(DataTypes.Tools.TillGround)

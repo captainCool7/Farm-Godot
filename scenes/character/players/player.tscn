@@ -404,7 +404,6 @@ radius = 4.12311
 y_sort_enabled = true
 collision_layer = 2
 script = ExtResource("1_x5kmf")
-current_tool = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -8)
@@ -449,11 +448,11 @@ player = NodePath("../..")
 animated_sprite_2D = NodePath("../../AnimatedSprite2D")
 
 [node name="HitComponent" parent="." instance=ExtResource("10_yu68e")]
-current_tool = 1
 
 [node name="HitComponentCollisionShape2D" type="CollisionShape2D" parent="HitComponent"]
 shape = SubResource("CircleShape2D_w36qx")
 debug_color = Color(0.772549, 0.211765, 0.945098, 0.65098)
 
+[connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="ready" from="StateMachine" to="." method="_on_state_machine_ready"]
 [connection signal="ready" from="StateMachine/Chopping" to="StateMachine/Chopping" method="_on_ready"]
